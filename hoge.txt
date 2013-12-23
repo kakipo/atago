@@ -1,0 +1,432 @@
+1 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+2 2013-12-21 19:44 kakipo             o │ omit 1.8
+3 2013-12-21 19:35 nk                 │ o Update README.md
+4 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+5 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+6 2013-12-21 19:31 kakipo             o │ add travis.yml
+7 2013-12-21 19:12 nk                 │ o Update README.md
+8 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+9 2013-12-21 18:45 nk                 o Update README.md
+10  2013-12-21 18:14 kakipo             o updated version
+11  2013-12-21 18:10 kakipo             o removed unnecessary comments
+12  2013-12-21 17:24 kakipo             o Now accepts config options
+13  2013-12-21 01:22 kakipo             o -fixed API end point
+14  2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+15  2013-12-21 00:19 nk                 o Update README.md
+16  2013-12-21 00:17 kakipo             o fixed README
+17  2013-12-21 00:06 kakipo             o removed unnecessary files
+18  2013-12-21 00:04 kakipo             o rename methods
+19  2013-12-21 00:01 kakipo             o added method "get_deck_port"
+20  2013-12-20 20:38 kakipo             o added validators
+21  2013-12-20 19:52 kakipo             o created API & Client
+22  2013-12-20 08:44 内藤 研介          o added .ruby-version
+23  2013-12-19 11:21 kakipo             o v0.0.1.1
+24  2013-12-19 11:09 kakipo             I init
+25  2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+26  2013-12-21 19:44 kakipo             o │ omit 1.8
+27  2013-12-21 19:35 nk                 │ o Update README.md
+28  2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+29  2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+30  2013-12-21 19:31 kakipo             o │ add travis.yml
+31  2013-12-21 19:12 nk                 │ o Update README.md
+32  2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+33  2013-12-21 18:45 nk                 o Update README.md
+34  2013-12-21 18:14 kakipo             o updated version
+35  2013-12-21 18:10 kakipo             o removed unnecessary comments
+36  2013-12-21 17:24 kakipo             o Now accepts config options
+37  2013-12-21 01:22 kakipo             o -fixed API end point
+38  2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+39  2013-12-21 00:19 nk                 o Update README.md
+40  2013-12-21 00:17 kakipo             o fixed README
+41  2013-12-21 00:06 kakipo             o removed unnecessary files
+42  2013-12-21 00:04 kakipo             o rename methods
+43  2013-12-21 00:01 kakipo             o added method "get_deck_port"
+44  2013-12-20 20:38 kakipo             o added validators
+45  2013-12-20 19:52 kakipo             o created API & Client
+46  2013-12-20 08:44 内藤 研介          o added .ruby-version
+47  2013-12-19 11:21 kakipo             o v0.0.1.1
+48  2013-12-19 11:09 kakipo             I init
+49  2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+50  2013-12-21 19:44 kakipo             o │ omit 1.8
+51  2013-12-21 19:35 nk                 │ o Update README.md
+52  2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+53  2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+54  2013-12-21 19:31 kakipo             o │ add travis.yml
+55  2013-12-21 19:12 nk                 │ o Update README.md
+56  2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+57  2013-12-21 18:45 nk                 o Update README.md
+58  2013-12-21 18:14 kakipo             o updated version
+59  2013-12-21 18:10 kakipo             o removed unnecessary comments
+60  2013-12-21 17:24 kakipo             o Now accepts config options
+61  2013-12-21 01:22 kakipo             o -fixed API end point
+62  2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+63  2013-12-21 00:19 nk                 o Update README.md
+64  2013-12-21 00:17 kakipo             o fixed README
+65  2013-12-21 00:06 kakipo             o removed unnecessary files
+66  2013-12-21 00:04 kakipo             o rename methods
+67  2013-12-21 00:01 kakipo             o added method "get_deck_port"
+68  2013-12-20 20:38 kakipo             o added validators
+69  2013-12-20 19:52 kakipo             o created API & Client
+70  2013-12-20 08:44 内藤 研介          o added .ruby-version
+71  2013-12-19 11:21 kakipo             o v0.0.1.1
+72  2013-12-19 11:09 kakipo             I init
+73  2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+74  2013-12-21 19:44 kakipo             o │ omit 1.8
+75  2013-12-21 19:35 nk                 │ o Update README.md
+76  2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+77  2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+78  2013-12-21 19:31 kakipo             o │ add travis.yml
+79  2013-12-21 19:12 nk                 │ o Update README.md
+80  2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+81  2013-12-21 18:45 nk                 o Update README.md
+82  2013-12-21 18:14 kakipo             o updated version
+83  2013-12-21 18:10 kakipo             o removed unnecessary comments
+84  2013-12-21 17:24 kakipo             o Now accepts config options
+85  2013-12-21 01:22 kakipo             o -fixed API end point
+86  2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+87  2013-12-21 00:19 nk                 o Update README.md
+88  2013-12-21 00:17 kakipo             o fixed README
+89  2013-12-21 00:06 kakipo             o removed unnecessary files
+90  2013-12-21 00:04 kakipo             o rename methods
+91  2013-12-21 00:01 kakipo             o added method "get_deck_port"
+92  2013-12-20 20:38 kakipo             o added validators
+93  2013-12-20 19:52 kakipo             o created API & Client
+94  2013-12-20 08:44 内藤 研介          o added .ruby-version
+95  2013-12-19 11:21 kakipo             o v0.0.1.1
+96  2013-12-19 11:09 kakipo             I init
+97  2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+98  2013-12-21 19:44 kakipo             o │ omit 1.8
+99  2013-12-21 19:35 nk                 │ o Update README.md
+100 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+101 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+102 2013-12-21 19:31 kakipo             o │ add travis.yml
+103 2013-12-21 19:12 nk                 │ o Update README.md
+104 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+105 2013-12-21 18:45 nk                 o Update README.md
+106 2013-12-21 18:14 kakipo             o updated version
+107 2013-12-21 18:10 kakipo             o removed unnecessary comments
+108 2013-12-21 17:24 kakipo             o Now accepts config options
+109 2013-12-21 01:22 kakipo             o -fixed API end point
+110 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+111 2013-12-21 00:19 nk                 o Update README.md
+112 2013-12-21 00:17 kakipo             o fixed README
+113 2013-12-21 00:06 kakipo             o removed unnecessary files
+114 2013-12-21 00:04 kakipo             o rename methods
+115 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+116 2013-12-20 20:38 kakipo             o added validators
+117 2013-12-20 19:52 kakipo             o created API & Client
+118 2013-12-20 08:44 内藤 研介          o added .ruby-version
+119 2013-12-19 11:21 kakipo             o v0.0.1.1
+120 2013-12-19 11:09 kakipo             I init
+121 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+122 2013-12-21 19:44 kakipo             o │ omit 1.8
+123 2013-12-21 19:35 nk                 │ o Update README.md
+124 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+125 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+126 2013-12-21 19:31 kakipo             o │ add travis.yml
+127 2013-12-21 19:12 nk                 │ o Update README.md
+128 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+129 2013-12-21 18:45 nk                 o Update README.md
+130 2013-12-21 18:14 kakipo             o updated version
+131 2013-12-21 18:10 kakipo             o removed unnecessary comments
+132 2013-12-21 17:24 kakipo             o Now accepts config options
+133 2013-12-21 01:22 kakipo             o -fixed API end point
+134 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+135 2013-12-21 00:19 nk                 o Update README.md
+136 2013-12-21 00:17 kakipo             o fixed README
+137 2013-12-21 00:06 kakipo             o removed unnecessary files
+138 2013-12-21 00:04 kakipo             o rename methods
+139 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+140 2013-12-20 20:38 kakipo             o added validators
+141 2013-12-20 19:52 kakipo             o created API & Client
+142 2013-12-20 08:44 内藤 研介          o added .ruby-version
+143 2013-12-19 11:21 kakipo             o v0.0.1.1
+144 2013-12-19 11:09 kakipo             I init
+145 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+146 2013-12-21 19:44 kakipo             o │ omit 1.8
+147 2013-12-21 19:35 nk                 │ o Update README.md
+148 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+149 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+150 2013-12-21 19:31 kakipo             o │ add travis.yml
+151 2013-12-21 19:12 nk                 │ o Update README.md
+152 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+153 2013-12-21 18:45 nk                 o Update README.md
+154 2013-12-21 18:14 kakipo             o updated version
+155 2013-12-21 18:10 kakipo             o removed unnecessary comments
+156 2013-12-21 17:24 kakipo             o Now accepts config options
+157 2013-12-21 01:22 kakipo             o -fixed API end point
+158 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+159 2013-12-21 00:19 nk                 o Update README.md
+160 2013-12-21 00:17 kakipo             o fixed README
+161 2013-12-21 00:06 kakipo             o removed unnecessary files
+162 2013-12-21 00:04 kakipo             o rename methods
+163 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+164 2013-12-20 20:38 kakipo             o added validators
+165 2013-12-20 19:52 kakipo             o created API & Client
+166 2013-12-20 08:44 内藤 研介          o added .ruby-version
+167 2013-12-19 11:21 kakipo             o v0.0.1.1
+168 2013-12-19 11:09 kakipo             I init
+169 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+170 2013-12-21 19:44 kakipo             o │ omit 1.8
+171 2013-12-21 19:35 nk                 │ o Update README.md
+172 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+173 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+174 2013-12-21 19:31 kakipo             o │ add travis.yml
+175 2013-12-21 19:12 nk                 │ o Update README.md
+176 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+177 2013-12-21 18:45 nk                 o Update README.md
+178 2013-12-21 18:14 kakipo             o updated version
+179 2013-12-21 18:10 kakipo             o removed unnecessary comments
+180 2013-12-21 17:24 kakipo             o Now accepts config options
+181 2013-12-21 01:22 kakipo             o -fixed API end point
+182 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+183 2013-12-21 00:19 nk                 o Update README.md
+184 2013-12-21 00:17 kakipo             o fixed README
+185 2013-12-21 00:06 kakipo             o removed unnecessary files
+186 2013-12-21 00:04 kakipo             o rename methods
+187 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+188 2013-12-20 20:38 kakipo             o added validators
+189 2013-12-20 19:52 kakipo             o created API & Client
+190 2013-12-20 08:44 内藤 研介          o added .ruby-version
+191 2013-12-19 11:21 kakipo             o v0.0.1.1
+192 2013-12-19 11:09 kakipo             I init
+193 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+194 2013-12-21 19:44 kakipo             o │ omit 1.8
+195 2013-12-21 19:35 nk                 │ o Update README.md
+196 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+197 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+198 2013-12-21 19:31 kakipo             o │ add travis.yml
+199 2013-12-21 19:12 nk                 │ o Update README.md
+200 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+201 2013-12-21 18:45 nk                 o Update README.md
+202 2013-12-21 18:14 kakipo             o updated version
+203 2013-12-21 18:10 kakipo             o removed unnecessary comments
+204 2013-12-21 17:24 kakipo             o Now accepts config options
+205 2013-12-21 01:22 kakipo             o -fixed API end point
+206 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+207 2013-12-21 00:19 nk                 o Update README.md
+208 2013-12-21 00:17 kakipo             o fixed README
+209 2013-12-21 00:06 kakipo             o removed unnecessary files
+210 2013-12-21 00:04 kakipo             o rename methods
+211 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+212 2013-12-20 20:38 kakipo             o added validators
+213 2013-12-20 19:52 kakipo             o created API & Client
+214 2013-12-20 08:44 内藤 研介          o added .ruby-version
+215 2013-12-19 11:21 kakipo             o v0.0.1.1
+216 2013-12-19 11:09 kakipo             I init
+217 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+218 2013-12-21 19:44 kakipo             o │ omit 1.8
+219 2013-12-21 19:35 nk                 │ o Update README.md
+220 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+221 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+222 2013-12-21 19:31 kakipo             o │ add travis.yml
+223 2013-12-21 19:12 nk                 │ o Update README.md
+224 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+225 2013-12-21 18:45 nk                 o Update README.md
+226 2013-12-21 18:14 kakipo             o updated version
+227 2013-12-21 18:10 kakipo             o removed unnecessary comments
+228 2013-12-21 17:24 kakipo             o Now accepts config options
+229 2013-12-21 01:22 kakipo             o -fixed API end point
+230 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+231 2013-12-21 00:19 nk                 o Update README.md
+232 2013-12-21 00:17 kakipo             o fixed README
+233 2013-12-21 00:06 kakipo             o removed unnecessary files
+234 2013-12-21 00:04 kakipo             o rename methods
+235 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+236 2013-12-20 20:38 kakipo             o added validators
+237 2013-12-20 19:52 kakipo             o created API & Client
+238 2013-12-20 08:44 内藤 研介          o added .ruby-version
+239 2013-12-19 11:21 kakipo             o v0.0.1.1
+240 2013-12-19 11:09 kakipo             I init
+241 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+242 2013-12-21 19:44 kakipo             o │ omit 1.8
+243 2013-12-21 19:35 nk                 │ o Update README.md
+244 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+245 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+246 2013-12-21 19:31 kakipo             o │ add travis.yml
+247 2013-12-21 19:12 nk                 │ o Update README.md
+248 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+249 2013-12-21 18:45 nk                 o Update README.md
+250 2013-12-21 18:14 kakipo             o updated version
+251 2013-12-21 18:10 kakipo             o removed unnecessary comments
+252 2013-12-21 17:24 kakipo             o Now accepts config options
+253 2013-12-21 01:22 kakipo             o -fixed API end point
+254 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+255 2013-12-21 00:19 nk                 o Update README.md
+256 2013-12-21 00:17 kakipo             o fixed README
+257 2013-12-21 00:06 kakipo             o removed unnecessary files
+258 2013-12-21 00:04 kakipo             o rename methods
+259 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+260 2013-12-20 20:38 kakipo             o added validators
+261 2013-12-20 19:52 kakipo             o created API & Client
+262 2013-12-20 08:44 内藤 研介          o added .ruby-version
+263 2013-12-19 11:21 kakipo             o v0.0.1.1
+264 2013-12-19 11:09 kakipo             I init
+265 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+266 2013-12-21 19:44 kakipo             o │ omit 1.8
+267 2013-12-21 19:35 nk                 │ o Update README.md
+268 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+269 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+270 2013-12-21 19:31 kakipo             o │ add travis.yml
+271 2013-12-21 19:12 nk                 │ o Update README.md
+272 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+273 2013-12-21 18:45 nk                 o Update README.md
+274 2013-12-21 18:14 kakipo             o updated version
+275 2013-12-21 18:10 kakipo             o removed unnecessary comments
+276 2013-12-21 17:24 kakipo             o Now accepts config options
+277 2013-12-21 01:22 kakipo             o -fixed API end point
+278 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+279 2013-12-21 00:19 nk                 o Update README.md
+280 2013-12-21 00:17 kakipo             o fixed README
+281 2013-12-21 00:06 kakipo             o removed unnecessary files
+282 2013-12-21 00:04 kakipo             o rename methods
+283 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+284 2013-12-20 20:38 kakipo             o added validators
+285 2013-12-20 19:52 kakipo             o created API & Client
+286 2013-12-20 08:44 内藤 研介          o added .ruby-version
+287 2013-12-19 11:21 kakipo             o v0.0.1.1
+288 2013-12-19 11:09 kakipo             I init
+289 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+290 2013-12-21 19:44 kakipo             o │ omit 1.8
+291 2013-12-21 19:35 nk                 │ o Update README.md
+292 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+293 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+294 2013-12-21 19:31 kakipo             o │ add travis.yml
+295 2013-12-21 19:12 nk                 │ o Update README.md
+296 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+297 2013-12-21 18:45 nk                 o Update README.md
+298 2013-12-21 18:14 kakipo             o updated version
+299 2013-12-21 18:10 kakipo             o removed unnecessary comments
+300 2013-12-21 17:24 kakipo             o Now accepts config options
+301 2013-12-21 01:22 kakipo             o -fixed API end point
+302 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+303 2013-12-21 00:19 nk                 o Update README.md
+304 2013-12-21 00:17 kakipo             o fixed README
+305 2013-12-21 00:06 kakipo             o removed unnecessary files
+306 2013-12-21 00:04 kakipo             o rename methods
+307 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+308 2013-12-20 20:38 kakipo             o added validators
+309 2013-12-20 19:52 kakipo             o created API & Client
+310 2013-12-20 08:44 内藤 研介          o added .ruby-version
+311 2013-12-19 11:21 kakipo             o v0.0.1.1
+312 2013-12-19 11:09 kakipo             I init
+313 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+314 2013-12-21 19:44 kakipo             o │ omit 1.8
+315 2013-12-21 19:35 nk                 │ o Update README.md
+316 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+317 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+318 2013-12-21 19:31 kakipo             o │ add travis.yml
+319 2013-12-21 19:12 nk                 │ o Update README.md
+320 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+321 2013-12-21 18:45 nk                 o Update README.md
+322 2013-12-21 18:14 kakipo             o updated version
+323 2013-12-21 18:10 kakipo             o removed unnecessary comments
+324 2013-12-21 17:24 kakipo             o Now accepts config options
+325 2013-12-21 01:22 kakipo             o -fixed API end point
+326 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+327 2013-12-21 00:19 nk                 o Update README.md
+328 2013-12-21 00:17 kakipo             o fixed README
+329 2013-12-21 00:06 kakipo             o removed unnecessary files
+330 2013-12-21 00:04 kakipo             o rename methods
+331 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+332 2013-12-20 20:38 kakipo             o added validators
+333 2013-12-20 19:52 kakipo             o created API & Client
+334 2013-12-20 08:44 内藤 研介          o added .ruby-version
+335 2013-12-19 11:21 kakipo             o v0.0.1.1
+336 2013-12-19 11:09 kakipo             I init
+337 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+338 2013-12-21 19:44 kakipo             o │ omit 1.8
+339 2013-12-21 19:35 nk                 │ o Update README.md
+340 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+341 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+342 2013-12-21 19:31 kakipo             o │ add travis.yml
+343 2013-12-21 19:12 nk                 │ o Update README.md
+344 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+345 2013-12-21 18:45 nk                 o Update README.md
+346 2013-12-21 18:14 kakipo             o updated version
+347 2013-12-21 18:10 kakipo             o removed unnecessary comments
+348 2013-12-21 17:24 kakipo             o Now accepts config options
+349 2013-12-21 01:22 kakipo             o -fixed API end point
+350 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+351 2013-12-21 00:19 nk                 o Update README.md
+352 2013-12-21 00:17 kakipo             o fixed README
+353 2013-12-21 00:06 kakipo             o removed unnecessary files
+354 2013-12-21 00:04 kakipo             o rename methods
+355 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+356 2013-12-20 20:38 kakipo             o added validators
+357 2013-12-20 19:52 kakipo             o created API & Client
+358 2013-12-20 08:44 内藤 研介          o added .ruby-version
+359 2013-12-19 11:21 kakipo             o v0.0.1.1
+360 2013-12-19 11:09 kakipo             I init
+361 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+362 2013-12-21 19:44 kakipo             o │ omit 1.8
+363 2013-12-21 19:35 nk                 │ o Update README.md
+364 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+365 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+366 2013-12-21 19:31 kakipo             o │ add travis.yml
+367 2013-12-21 19:12 nk                 │ o Update README.md
+368 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+369 2013-12-21 18:45 nk                 o Update README.md
+370 2013-12-21 18:14 kakipo             o updated version
+371 2013-12-21 18:10 kakipo             o removed unnecessary comments
+372 2013-12-21 17:24 kakipo             o Now accepts config options
+373 2013-12-21 01:22 kakipo             o -fixed API end point
+374 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+375 2013-12-21 00:19 nk                 o Update README.md
+376 2013-12-21 00:17 kakipo             o fixed README
+377 2013-12-21 00:06 kakipo             o removed unnecessary files
+378 2013-12-21 00:04 kakipo             o rename methods
+379 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+380 2013-12-20 20:38 kakipo             o added validators
+381 2013-12-20 19:52 kakipo             o created API & Client
+382 2013-12-20 08:44 内藤 研介          o added .ruby-version
+383 2013-12-19 11:21 kakipo             o v0.0.1.1
+384 2013-12-19 11:09 kakipo             I init
+385 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+386 2013-12-21 19:44 kakipo             o │ omit 1.8
+387 2013-12-21 19:35 nk                 │ o Update README.md
+388 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+389 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+390 2013-12-21 19:31 kakipo             o │ add travis.yml
+391 2013-12-21 19:12 nk                 │ o Update README.md
+392 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+393 2013-12-21 18:45 nk                 o Update README.md
+394 2013-12-21 18:14 kakipo             o updated version
+395 2013-12-21 18:10 kakipo             o removed unnecessary comments
+396 2013-12-21 17:24 kakipo             o Now accepts config options
+397 2013-12-21 01:22 kakipo             o -fixed API end point
+398 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+399 2013-12-21 00:19 nk                 o Update README.md
+400 2013-12-21 00:17 kakipo             o fixed README
+401 2013-12-21 00:06 kakipo             o removed unnecessary files
+402 2013-12-21 00:04 kakipo             o rename methods
+403 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+404 2013-12-20 20:38 kakipo             o added validators
+405 2013-12-20 19:52 kakipo             o created API & Client
+406 2013-12-20 08:44 内藤 研介          o added .ruby-version
+407 2013-12-19 11:21 kakipo             o v0.0.1.1
+408 2013-12-19 11:09 kakipo             I init
+409 2013-12-21 19:44 kakipo             M─┐ [master] [origin/HEAD] [origin/master] Merge branch 'master' of github.com:kakipo/haruna
+410 2013-12-21 19:44 kakipo             o │ omit 1.8
+411 2013-12-21 19:35 nk                 │ o Update README.md
+412 2013-12-21 19:33 kakipo             I─┘ modified travis.yml
+413 2013-12-21 19:31 kakipo             M─┐ Merge branch 'master' of github.com:kakipo/haruna
+414 2013-12-21 19:31 kakipo             o │ add travis.yml
+415 2013-12-21 19:12 nk                 │ o Update README.md
+416 2013-12-21 18:45 nk                 I─┘ [v0.0.2] Update README.md
+417 2013-12-21 18:45 nk                 o Update README.md
+418 2013-12-21 18:14 kakipo             o updated version
+419 2013-12-21 18:10 kakipo             o removed unnecessary comments
+420 2013-12-21 17:24 kakipo             o Now accepts config options
+421 2013-12-21 01:22 kakipo             o -fixed API end point
+422 2013-12-21 00:35 nk                 o [v0.0.1.1] Update README.md
+423 2013-12-21 00:19 nk                 o Update README.md
+424 2013-12-21 00:17 kakipo             o fixed README
+425 2013-12-21 00:06 kakipo             o removed unnecessary files
+426 2013-12-21 00:04 kakipo             o rename methods
+427 2013-12-21 00:01 kakipo             o added method "get_deck_port"
+428 2013-12-20 20:38 kakipo             o added validators
+429 2013-12-20 19:52 kakipo             o created API & Client
+430 2013-12-20 08:44 内藤 研介          o added .ruby-version
+431 2013-12-19 11:21 kakipo             o v0.0.1.1
+432 2013-12-19 11:09 kakipo             I init
