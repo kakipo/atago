@@ -4,11 +4,11 @@ require "text"
 require "csv"
 require "pry"
 
-class EditWind
+class DeckWindow
 
-  def initialize(wind)
+  def initialize(win_default)
     # デフォルトウィンドウの高さを少し小さくしたサブウィンドウを作成
-    @window = wind.subwin(wind.maxy - 2, wind.maxx, 0, 0)
+    @window = win_default.subwin(win_default.maxy - 2, win_default.maxx, 0, 0)
     # スクロール機能をONにする
     @window.scrollok(true)
     # カーソルを隠す

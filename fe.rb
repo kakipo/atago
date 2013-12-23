@@ -1,9 +1,9 @@
 # coding: utf-8
 $:.unshift File.dirname(__FILE__)
 require "curses"
-require "editwind"
-require "commandwind"
-# [追加]
+require "deck_window"
+require "command_window"
+require "ship_window"
 require "handler"
 
 #/Users/kakipo/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/forwardable.rb:103: warning: already initialized constant Forwardable::FORWARDABLE_VERSION
@@ -24,16 +24,16 @@ Curses.init_screen
 Curses.cbreak
 Curses.noecho
 # デフォルトウィンドウを取得
-defo_wind = Curses.stdscr
+win_default = Curses.stdscr
 # 編集エリアウィンドウを作成
-edit_wind = EditWind.new(defo_wind)
+win_deck = DeckWindow.new(win_default)
 # 情報表示エリアウィンドウを作成
-cmd_wind = CommandWind.new(defo_wind, file_name)
+win_cmd = CommandWindow.new(win_default, file_name)
 # [追加]イベント処理クラスを生成
 handler = Handler.new
 
 # ファイルをオープンし内容を編集エリアに表示する
-edit_wind.display(file_name)
+win_deck.display(file_name)
 
 # C-c をトラップ
 Signal.trap(:INT){
@@ -48,9 +48,9 @@ Signal.trap(:INT){
 # [追加]イベントループ
 begin
   while true
-    ch = edit_wind.getch #１文字入力。
+    ch = win_deck.getch #１文字入力。
     # イベント処理クラスで処理分岐を行う
-    handler = handler.execute(edit_wind, cmd_wind, ch)
+    handler = handler.execute(win_deck, win_cmd, ch)
   end
 end
 #コンソール画面を終了

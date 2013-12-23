@@ -1,19 +1,20 @@
 require "curses"
 
-class CommandWind
-  def initialize(wind,file_name="")
-    max_y   = wind.maxy
-    max_x   = wind.maxx
-    begin_y = wind.maxy - 2
-    wind.setpos(begin_y, 0)
-    wind.standout             # 以後の文字表示を反転色にする
-    wind.addstr(" " * max_x)  # 画面横サイズ分の空白で帯を表現
-    wind.standend             # 反転色解除
+class CommandWindow
+
+  def initialize(win_default, file_name="")
+    max_y   = win_default.maxy
+    max_x   = win_default.maxx
+    begin_y = win_default.maxy - 2
+    win_default.setpos(begin_y, 0)
+    win_default.standout             # 以後の文字表示を反転色にする
+    win_default.addstr(" " * max_x)  # 画面横サイズ分の空白で帯を表現
+    win_default.standend             # 反転色解除
     # 帯の真ん中にfile名を表示
-    wind.setpos(begin_y, (max_x / 2) - (file_name.length / 2))
-    wind.addstr(file_name)
+    win_default.setpos(begin_y, (max_x / 2) - (file_name.length / 2))
+    win_default.addstr(file_name)
     # 情報表示用のサブウィンドウを作成
-    @window = wind.subwin((max_y - begin_y), max_x,begin_y, 0)
+    @window = win_default.subwin((max_y - begin_y), max_x,begin_y, 0)
 
 
     @window.attron(Curses.color_pair(3))
@@ -23,7 +24,6 @@ class CommandWind
     @window.setpos(1, 10)
     @window.addstr("hogehoge")
     # Curses.attroff(Curses::A_COLOR)
-
     @window.refresh
   end
 
