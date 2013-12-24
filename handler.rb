@@ -1,12 +1,11 @@
 # require "win_deckow"
-class Handler
-  def execute(win_deck, win_cmd, input_ch)
+class DeckHandler
+  def execute(win_deck, win_ship, win_cmd, input_ch)
       win_cmd.disp_ch(input_ch)
-      # コマンド入力を処理
       case input_ch
-      when 27 # ESC
-      when ?i
-        return EditHandler.new
+      when 10 # enter
+        win_ship.highlight_on
+        return ShipHandler.new
       when ?j # カーソルを下へ
         win_deck.cursor_down
       when ?k # カーソルを上へ
@@ -26,12 +25,26 @@ class Handler
   end
 end
 
-class EditHandler
-  def execute(win_deck, win_cmd, input_ch)
-      # 文字入力を処理
+class ShipHandler
+  def execute(win_deck, win_ship, win_cmd, input_ch)
+      win_cmd.disp_ch(input_ch)
       case input_ch
+      when ?j # カーソルを下へ
+        win_ship.cursor_down
+      when ?k # カーソルを上へ
+        win_ship.cursor_up
+      when 4 # C-d
+        win_ship.page_down
+      when 21 # C-v
+        win_ship.page_up
+      when 5 # C-e
+        win_ship.scroll_down
+      when 25 # C-y
+        win_ship.scroll_up
       when 27 # ESC
-        return Handler.new
+      when ?q
+        win_ship.highlight_off
+        return DeckHandler.new
       else
         #nop
       end
