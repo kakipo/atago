@@ -9,9 +9,11 @@ class DeckHandler
       when ?j # カーソルを下へ
         win_deck.cursor_down
         win_ship.display(win_deck.current_item)
+        win_cmd.display(win_deck.current_item)
       when ?k # カーソルを上へ
         win_deck.cursor_up
         win_ship.display(win_deck.current_item)
+        win_cmd.display(win_deck.current_item)
       # when 4 # C-d
       #   win_deck.page_down
       # when 21 # C-v

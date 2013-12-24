@@ -32,7 +32,7 @@ Curses.start_color
 # COLOR_WHITE   7
 Curses.init_pair(1, Curses::COLOR_BLACK, Curses::COLOR_WHITE)
 Curses.init_pair(2, -1, Curses::COLOR_GREEN) # default color & green
-Curses.init_pair(3, Curses::COLOR_WHITE, Curses::COLOR_BLUE)
+Curses.init_pair(3, -1, Curses::COLOR_BLUE)
 
 
 # デフォルトウィンドウを取得
@@ -45,6 +45,7 @@ handler = DeckHandler.new
 # ファイルをオープンし内容を編集エリアに表示する
 win_deck.display
 win_ship.display(win_deck.current_item)
+win_cmd.display(win_deck.current_item)
 
 # C-c をトラップ
 Signal.trap(:INT){

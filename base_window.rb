@@ -11,41 +11,12 @@ class BaseWindow
   #   return @window.getch
   # end
 
-  def max_length_hash(file_name)
-    if @mlh.nil?
-      header_table = CSV.table("header_#{file_name}")
-      table = CSV.table(file_name)
-      # フォーマット用に各列毎の最大桁数を保持しておく
-      @mlh = table.headers.reduce({}) do |hash, col_key|
-        hash[col_key] = (header_table[col_key] + table[col_key]).map{|cell| Util.print_size(cell.to_s) }.max
-        hash
-      end
+  def clear
+    (0..(@window.maxy - 1)).each do |idx|
+       @window.setpos(idx, 0)
+       @window.addstr(" " * @window.maxx)
     end
-    @mlh
   end
-
-  def setup_header(win_default, win_top, file_name)
-    max_x   = win_default.maxx
-    header_height = 1
-    # ヘッダ行の作成
-    win_header = win_default.subwin(header_height, max_x, win_top, 0)
-    win_header.setpos(0, 0)
-    header_row = CSV.table("header_#{file_name}")[0]
-    str_arr = header_row.map{|item|
-      len = max_length_hash(file_name)[item[0]]
-      Util.pad_to_print_size(item[1].to_s, len)
-    }
-
-    # highlight legend
-    win_header.setpos(0, 0)
-    win_header.attron(Curses::A_UNDERLINE)
-    win_header.addstr(" " * win_header.maxx)
-    win_header.setpos(0, 0)
-    win_header.addstr(str_arr.join(" "))
-    win_header.attroff(Curses::A_UNDERLINE)
-    win_header.refresh
-  end
-
 
   def highlight_on
     str = @data[@cursor_y + @top_statement]
@@ -168,6 +139,43 @@ class BaseWindow
 
   def current_item
     @data[@cursor_y + @top_statement]
+  end
+
+
+
+  def max_length_hash(file_name)
+    if @mlh.nil?
+      header_table = CSV.table("header_#{file_name}")
+      table = CSV.table(file_name)
+      # フォーマット用に各列毎の最大桁数を保持しておく
+      @mlh = table.headers.reduce({}) do |hash, col_key|
+        hash[col_key] = (header_table[col_key] + table[col_key]).map{|cell| Util.print_size(cell.to_s) }.max
+        hash
+      end
+    end
+    @mlh
+  end
+
+  def setup_header(win_default, win_top, file_name)
+    max_x   = win_default.maxx
+    header_height = 1
+    # ヘッダ行の作成
+    win_header = win_default.subwin(header_height, max_x, win_top, 0)
+    win_header.setpos(0, 0)
+    header_row = CSV.table("header_#{file_name}")[0]
+    str_arr = header_row.map{|item|
+      len = max_length_hash(file_name)[item[0]]
+      Util.pad_to_print_size(item[1].to_s, len)
+    }
+
+    # highlight legend
+    win_header.setpos(0, 0)
+    win_header.attron(Curses::A_UNDERLINE)
+    win_header.addstr(" " * win_header.maxx)
+    win_header.setpos(0, 0)
+    win_header.addstr(str_arr.join(" "))
+    win_header.attroff(Curses::A_UNDERLINE)
+    win_header.refresh
   end
 
 end

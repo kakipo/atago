@@ -53,14 +53,6 @@ class ShipWindow < BaseWindow
     @window.refresh
   end
 
-  def clear
-    (0..(@window.maxy - 1)).each do |idx|
-       @window.setpos(idx, 0)
-       @window.addstr(" " * @window.maxx)
-    end
-  end
-
-
 
 
 end
