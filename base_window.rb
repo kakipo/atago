@@ -167,7 +167,7 @@ class BaseWindow
   end
 
   def current_item
-    @data[@top_statement]
+    @data[@cursor_y + @top_statement]
   end
 
 end

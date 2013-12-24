@@ -44,7 +44,7 @@ handler = DeckHandler.new
 
 # ファイルをオープンし内容を編集エリアに表示する
 win_deck.display
-win_ship.display
+win_ship.display(win_deck.current_item)
 
 # C-c をトラップ
 Signal.trap(:INT){

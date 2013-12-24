@@ -22,12 +22,16 @@ class ShipWindow < BaseWindow
     @window.refresh
   end
 
+  def display(deck_id)
+    clear
 
-  def display
+    deck_id = deck_id.split(/\s+/)[1]
+
     @data = Text.new
     table = CSV.table("ships.csv")
 
     table.each do |row|
+      next unless row[:group] == deck_id
       str_arr = row.map{|item|
         len = max_length_hash("ships.csv")[item[0]]
         Util.pad_to_print_size(item[1].to_s, len)
@@ -47,6 +51,13 @@ class ShipWindow < BaseWindow
     @window.setpos(@cursor_y, 0)
 
     @window.refresh
+  end
+
+  def clear
+    (0..(@window.maxy - 1)).each do |idx|
+       @window.setpos(idx, 0)
+       @window.addstr(" " * @window.maxx)
+    end
   end
 
 
