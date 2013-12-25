@@ -18,7 +18,7 @@ module Atago
       end
 
       def highlight_on
-        str = @data[@cursor_y + @top_statement]
+        str = @data[@cursor_y + @top_statement].to_s
         @window.setpos(@cursor_y, 0)
         @window.attron(Curses.color_pair(2))
         @window.addstr(" " * @window.maxx)
@@ -29,7 +29,7 @@ module Atago
       end
 
       def highlight_off
-        str = @data[@cursor_y + @top_statement]
+        str = @data[@cursor_y + @top_statement].to_s
         @window.setpos(@cursor_y, 0)
         @window.addstr(" " * @window.maxx)
         @window.setpos(@cursor_y, 0)
@@ -140,8 +140,6 @@ module Atago
         @data[@cursor_y + @top_statement]
       end
 
-
-
       def max_length_hash(file_name)
         if @mlh.nil?
           header_table = CSV.table("header_#{file_name}")
@@ -155,24 +153,19 @@ module Atago
         @mlh
       end
 
-      def setup_header(win_default, win_top, file_name)
+      def setup_header(win_default, win_top, model)
         max_x   = win_default.maxx
         header_height = 1
         # ヘッダ行の作成
         win_header = win_default.subwin(header_height, max_x, win_top, 0)
         win_header.setpos(0, 0)
-        header_row = ::CSV.table("header_#{file_name}")[0]
-        str_arr = header_row.map{|item|
-          len = max_length_hash(file_name)[item[0]]
-          Util.pad_to_print_size(item[1].to_s, len)
-        }
 
         # highlight legend
         win_header.setpos(0, 0)
         win_header.attron(Curses::A_UNDERLINE)
         win_header.addstr(" " * win_header.maxx)
         win_header.setpos(0, 0)
-        win_header.addstr(str_arr.join(" "))
+        win_header.addstr(model.header_str)
         win_header.attroff(Curses::A_UNDERLINE)
         win_header.refresh
       end

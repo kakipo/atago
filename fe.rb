@@ -44,9 +44,10 @@ win_cmd = Atago::View::CommandWindow.new(win_default)
 handler = Atago::DeckHandler.new
 
 # ファイルをオープンし内容を編集エリアに表示する
-win_deck.display
-win_ship.display(win_deck.current_item)
-win_cmd.display(win_deck.current_item)
+handler.redraw(win_deck, win_ship, win_cmd)
+# win_deck.display
+# win_ship.display(win_deck.current_item)
+# win_cmd.display(win_deck.current_item)
 
 # C-c をトラップ
 Signal.trap(:INT){

@@ -2,6 +2,8 @@
 module Atago
   module View
     class ShipWindow < BaseWindow
+      require "atago/models/deck"
+      require "atago/models/ship"
 
       # 艦船用のサブウィンドウを作成
       def initialize(win_default)
@@ -11,7 +13,7 @@ module Atago
 
         # ヘッダの作成
         header_height = 1
-        setup_header(win_default, window_top, "ships.csv")
+        setup_header(win_default, window_top, Atago::Model::Ship)
 
         # 本体の作成
         command_height = 2
@@ -21,6 +23,27 @@ module Atago
         @window.scrollok(true)
         @window.refresh
       end
+
+      def update(data, current_deck)
+        clear
+        @data = data.select{|ship| current_deck.ships.include?(ship._id)}
+
+        # 初期表示として0行目からウィンドウの最大行数まで一行ずつ表示する
+        @data[0..(@window.maxy - 1)].each_with_index do |item, idx|
+           @window.setpos(idx, 0)
+           @window.addstr(item.to_s)
+        end
+
+        @cursor_y = 0
+        # インスタンス変数の@top_statementとは、現在表示されている一番上のデータが、実際のデータ（@data）では何行目かを表現しています。下へスクロールすると、この値は増えていき、上へスクロールすると減っていきます。ただし当然ですが実際のデータ数以上には増えませんし、0未満にもなりません。
+        @top_statement = 0
+        @window.setpos(@cursor_y, 0)
+
+        highlight_on
+
+        @window.refresh
+      end
+
 
       def display(deck_id)
         clear

@@ -56,4 +56,9 @@ describe Atago::Model::Ship do
     end
   end
 
+  describe ".max_length_hash" do
+    subject { Atago::Model::Ship.max_length_hash("data/dummy_ships.csv") }
+    it { binding.pry }
+  end
+
 end
