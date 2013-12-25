@@ -53,10 +53,6 @@ Signal.trap(:INT){
   puts "...GOOD BYE..."
   exit(0)
 }
-#C-y
-Signal.trap(:SIGTSTP){
-  # puts "+"  * 2000
-}
 
 begin
   while true
