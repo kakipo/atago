@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'pry'
-gem 'haruna', :path => '~/work/haruna'
-gem 'rspec'
+# Specify your gem's dependencies in atago.gemspec
+gemspec
