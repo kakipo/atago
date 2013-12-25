@@ -1,3 +1,4 @@
+# coding: utf-8
 # require "win_deckow"
 class DeckHandler
   def execute(win_deck, win_ship, win_cmd, input_ch)
