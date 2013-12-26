@@ -1,17 +1,14 @@
 # coding: utf-8
-# require "win_deckow"
+require 'haruna'
+require 'json'
+require "atago/models/deck"
+require "atago/models/ship"
+
 module Atago
-
   class DeckHandler
-    require 'haruna'
-    require 'json'
-    require "atago/models/deck"
-    require "atago/models/ship"
-
-
     def initialize
       url = "http://125.6.189.215"
-      # token = ""
+      token = "5580d1ff1f48262af5c7da9c8d2b35b1fe4208ac"
       @client = Haruna::Client.new(token, url, proxy: "http://127.0.0.1:8888")
       @cache = {}
     end

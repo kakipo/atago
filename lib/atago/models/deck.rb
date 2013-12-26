@@ -13,9 +13,6 @@ module Atago
         @ships      = hash["api_ship"]
       end
 
-      def to_s
-        "#{@_id}  #{@name}  #{@ships}"
-      end
     end
   end
 end

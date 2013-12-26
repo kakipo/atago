@@ -13,6 +13,7 @@ describe Atago::Model::Ship do
       before do
         @hash = {
           "api_id"        => my_id,
+          "api_lv"        => my_lv,
           "api_ship_id"   => my_ship_id,
           "api_nowhp"     => my_nowhp,
           "api_maxhp"     => my_maxhp,
@@ -20,6 +21,7 @@ describe Atago::Model::Ship do
           "api_raisou"    => [my_raisou, 99],
           "api_taiku"     => [my_taiku, 99],
           "api_soukou"    => [my_soukou, 99],
+          "api_taisen"    => [my_taisen, 99],
           "api_kaihi"     => [my_kaihi, 99],
           "api_sakuteki"  => [my_sakuteki, 99],
           "api_lucky"     => [my_lucky, 99],
@@ -27,6 +29,7 @@ describe Atago::Model::Ship do
         }
       end
       let(:my_id) { (rand * 100).to_i }
+      let(:my_lv) { (rand * 100).to_i }
       let(:my_ship_id) { (rand * 100).to_i }
       let(:my_nowhp) { (rand * 100).to_i }
       let(:my_maxhp) { (rand * 100).to_i }
@@ -35,12 +38,14 @@ describe Atago::Model::Ship do
       let(:my_taiku) { (rand * 100).to_i }
       let(:my_soukou) { (rand * 100).to_i }
       let(:my_kaihi) { (rand * 100).to_i }
+      let(:my_taisen) { (rand * 100).to_i }
       let(:my_sakuteki) { (rand * 100).to_i }
       let(:my_lucky) { (rand * 100).to_i }
       let(:my_cond) { (rand * 100).to_i }
       subject { Atago::Model::Ship.new(@hash) }
       it { should be_an_instance_of Atago::Model::Ship }
       its(:_id) { should eq my_id }
+      its(:lv) { should eq my_lv }
       its(:ship_id) { should eq my_ship_id }
       its(:nowhp) { should eq my_nowhp }
       its(:maxhp) { should eq my_maxhp }
@@ -49,6 +54,7 @@ describe Atago::Model::Ship do
       its(:taiku) { should eq my_taiku }
       its(:soukou) { should eq my_soukou }
       its(:kaihi) { should eq my_kaihi }
+      its(:taisen) { should eq my_taisen }
       its(:sakuteki) { should eq my_sakuteki }
       its(:lucky) { should eq my_lucky }
       its(:cond) { should eq my_cond }
@@ -56,9 +62,9 @@ describe Atago::Model::Ship do
     end
   end
 
-  describe ".max_length_hash" do
-    subject { Atago::Model::Ship.max_length_hash("data/dummy_ships.csv") }
-    it { binding.pry }
-  end
+  # describe ".max_length_hash" do
+  #   subject { Atago::Model::Ship.max_length_hash("data/dummy_ships.csv") }
+  #   it { binding.pry }
+  # end
 
 end

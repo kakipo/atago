@@ -1,9 +1,7 @@
+
 module Atago
   module Model
-    require 'atago/util'
     class Ship
-      require 'csv'
-      @mlp = nil
 
       attr_reader :_id, :deck_name, :lv, :ship_id, :name, :nowhp, :maxhp, :karyoku, :raisou,
       :taiku, :soukou, :taisen, :kaihi, :sakuteki, :lucky, :cond
@@ -38,36 +36,36 @@ module Atago
         @master[ship_id]
       end
 
-      def self.header_str
-        header_row = CSV.table("data/dummy_ships.csv")[0]
-        header_row.map{|item|
-          col_key = item[0]
-          val = item[1]
-          len = Ship.max_length_hash("data/dummy_ships.csv")[col_key]
-          Util.pad_to_print_size(val.to_s, len)
-        }.join(" ")
-      end
+      # def self.header_str
+      #   header_row = CSV.table("data/dummy_ships.csv")[0]
+      #   header_row.map{|item|
+      #     col_key = item[0]
+      #     val = item[1]
+      #     len = Ship.max_length_hash("data/dummy_ships.csv")[col_key]
+      #     Util.pad_to_print_size(val.to_s, len)
+      #   }.join(" ")
+      # end
 
-      # フォーマット出力用
-      # 列毎の最大桁数をキャッシュし返す
-      def self.max_length_hash(file_name)
-        if @mlh.nil?
-          dummy_table = CSV.table(file_name)
-          @mlh = dummy_table.headers.reduce({}) do |hash, col_key|
-            hash[col_key] = dummy_table[col_key].map{|val|
-              Util.print_size(val.to_s) }.max
-            hash
-          end
-        end
-        @mlh
-      end
+      # # フォーマット出力用
+      # # 列毎の最大桁数をキャッシュし返す
+      # def self.max_length_hash(file_name)
+      #   if @mlh.nil?
+      #     dummy_table = CSV.table(file_name)
+      #     @mlh = dummy_table.headers.reduce({}) do |hash, col_key|
+      #       hash[col_key] = dummy_table[col_key].map{|val|
+      #         Util.print_size(val.to_s) }.max
+      #       hash
+      #     end
+      #   end
+      #   @mlh
+      # end
 
-      def to_s
-        [:_id, :deck_name, :name, :lv, :maxhp, :karyoku, :raisou, :taiku, :soukou, :taisen, :kaihi, :sakuteki, :lucky, :cond].map {|key|
-          len = Ship.max_length_hash("data/dummy_ships.csv")[key]
-          Util.pad_to_print_size(self.send(key).to_s, len)
-        }.join(" ")
-      end
+      # def to_s
+      #   [:_id, :deck_name, :name, :lv, :maxhp, :karyoku, :raisou, :taiku, :soukou, :taisen, :kaihi, :sakuteki, :lucky, :cond].map {|key|
+      #     len = Ship.max_length_hash("data/dummy_ships.csv")[key]
+      #     Util.pad_to_print_size(self.send(key).to_s, len)
+      #   }.join(" ")
+      # end
 
     end
   end

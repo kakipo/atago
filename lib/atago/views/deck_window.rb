@@ -1,5 +1,5 @@
 # coding: utf-8
-require "atago/text"
+require "atago/decorator"
 require "atago/views/base_window"
 
 module Atago
@@ -12,15 +12,18 @@ module Atago
         window_height = 10
         window_top = 0
 
+        @decorator = Decorator.new("data/formatter_decks.csv")
+
         # ヘッダの作成
         header_height = 1
-        # setup_header(win_default, window_top, "decks.csv")
+        setup_header(win_default, window_top, @decorator.header_str)
 
         # 本体の作成
         body_top = window_top + header_height
         @window = win_default.subwin(window_height, max_x, body_top, 0)
         @window.scrollok(true)
         @window.refresh
+        # @decorator = Decorator.new("data/")
       end
 
       def update(data)
@@ -29,7 +32,8 @@ module Atago
         # 初期表示として0行目からウィンドウの最大行数まで一行ずつ表示する
         @data[0..(@window.maxy - 1)].each_with_index do |item, idx|
            @window.setpos(idx, 0)
-           @window.addstr(item.to_s)
+           str = @decorator.body_str(item)
+           @window.addstr(str)
         end
 
         @cursor_y = 0
@@ -75,8 +79,6 @@ module Atago
 
         @window.refresh
       end
-
-
     end
   end
 end

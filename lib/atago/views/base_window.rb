@@ -1,14 +1,7 @@
 # coding: utf-8
-require 'csv'
-require "atago/util"
-
 module Atago
   module View
     class BaseWindow
-
-      # def getch
-      #   return @window.getch
-      # end
 
       def clear
         (0..(@window.maxy - 1)).each do |idx|
@@ -17,8 +10,12 @@ module Atago
         end
       end
 
+      def data_to_str(item)
+        @decorator.body_str(item)
+      end
+
       def highlight_on
-        str = @data[@cursor_y + @top_statement].to_s
+        str = data_to_str(@data[@cursor_y + @top_statement])
         @window.setpos(@cursor_y, 0)
         @window.attron(Curses.color_pair(2))
         @window.addstr(" " * @window.maxx)
@@ -29,7 +26,7 @@ module Atago
       end
 
       def highlight_off
-        str = @data[@cursor_y + @top_statement].to_s
+        str = data_to_str(@data[@cursor_y + @top_statement])
         @window.setpos(@cursor_y, 0)
         @window.addstr(" " * @window.maxx)
         @window.setpos(@cursor_y, 0)
@@ -78,7 +75,6 @@ module Atago
 
         @window.refresh
       end
-
 
       # 1行上へスクロール
       def scroll_up
@@ -140,20 +136,7 @@ module Atago
         @data[@cursor_y + @top_statement]
       end
 
-      def max_length_hash(file_name)
-        if @mlh.nil?
-          header_table = CSV.table("header_#{file_name}")
-          table = CSV.table(file_name)
-          # フォーマット用に各列毎の最大桁数を保持しておく
-          @mlh = table.headers.reduce({}) do |hash, col_key|
-            hash[col_key] = (header_table[col_key] + table[col_key]).map{|cell| Util.print_size(cell.to_s) }.max
-            hash
-          end
-        end
-        @mlh
-      end
-
-      def setup_header(win_default, win_top, model)
+      def setup_header(win_default, win_top, header_str)
         max_x   = win_default.maxx
         header_height = 1
         # ヘッダ行の作成
@@ -165,7 +148,7 @@ module Atago
         win_header.attron(Curses::A_UNDERLINE)
         win_header.addstr(" " * win_header.maxx)
         win_header.setpos(0, 0)
-        win_header.addstr(model.header_str)
+        win_header.addstr(header_str)
         win_header.attroff(Curses::A_UNDERLINE)
         win_header.refresh
       end
